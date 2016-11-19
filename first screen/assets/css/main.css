@@ -83,17 +83,22 @@
 	}
 /* SEARCH BAR!!!!!!! */
 
+
+/* magnifying glass icon */
+
 @import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 .yup { position: relative; }
 .yup input { text-indent: 30px;}
 .yup .fa-search { 
   position: absolute;
-  top: 24px;
-  left: 7px;
+  top: 15px;
+  right: 9px;
   font-size: 15px;
 }
+
+/*bar itself */ 
 	input[type=text] {
-    width: 130px;
+    width: 160px;
     box-sizing: border-box;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -102,7 +107,7 @@
     background-image: url('searchicon.png');
     background-position: 10px 10px;
     background-repeat: no-repeat;
-    padding: 12px 20px 12px 40px;
+    padding: 50px 20px 600px 40px;
     -webkit-transition: width 0.4s ease-in-out;
     transition: width 0.4s ease-in-out;
 }
