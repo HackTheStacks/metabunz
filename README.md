@@ -1,2 +1,2 @@
-# mb_api
+# mb-api
 api service for metabunz
