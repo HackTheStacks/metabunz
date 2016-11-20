@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "angular": "^1.5.8",
+    "angular-route": "^1.5.8",
     "angular-ui-router": "^0.3.2"
   },
   "devDependencies": {},
