@@ -48,7 +48,10 @@ sample response:
 sample response:
 ```
 {
-    'results': ['franklin roosevelt', 'a cool exhibition name']
+    'results': [
+        'Akeley, Carl Ethan, 1864-1926', 
+        'Akeley-Eastman-Pomeroy African Hall Expedition of the American Museum of Natural History'
+    ]
 }
 ```
 
@@ -72,3 +75,9 @@ Running the API:
 $ pip install -r requirements.txt
 $ python ./metasearch.py
 ```
+
+##TODOS
+- write reindexing cron script 
+- add authentication 
+- pin elasticsearch install
+- specify host for elasticsearch prod
