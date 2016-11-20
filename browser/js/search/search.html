@@ -1,0 +1,22 @@
+	    <div class="input-group">
+			<!-- <input id="textinput" class="form-control" value="" cols=80 ng-submit="keyword" ng-keyup="submit($event)">  -->
+			<input id="textinput" class="form-control" value="" ng-submit="keyword" ng-keyup="submit($event)" placeholder="Search.."> 
+			 <span class="input-group-btn">
+				<button id="searchbutton" class="btn btn-primary" ng-click="toggleStartStop()" ng-show="!isSpeaking"> 
+					<i class="fa fa-microphone-slash microphone"></i> 
+					
+					<i class="fa fa-search"></i>
+					
+					 <!-- <span class="glyphicon glyphicon-ice-lolly"></span> -->
+					<!-- <span class="glyphicon glyphicon-volume-up">
+					</span> -->
+				</button>
+				<button id="stopbutton" class="btn btn-primary" ng-click="toggleStartStop()" ng-show="isSpeaking">
+				<i class="fa fa-microphone microphone"></i>
+
+				<i class="fa fa-search"></i>
+					<!-- <span class="glyphicon glyphicon-refresh"> </span>-->	
+				</button>
+		    </span>
+        </div>
+ 
