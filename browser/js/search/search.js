@@ -6,17 +6,17 @@ app.directive('keywordSearch', function ($state) {
     };
 });
 app.service('searchService', function(){
-	var cusine = "";
-	var addcusine = function(_cusine){
-		cusine = _cusine;
+	var searchword = "";
+	var addsearchword = function(_searchword){
+		searchword = _searchword;
 	}
-	var getcusine = function(){
-		if(cusine.length>=1) return cusine;
+	var getsearchword = function(){
+		if(searchword.length>=1) return searchword;
 		else return "";
 	}
 	return {
-		addcusine: addcusine,
-		getcusine: getcusine
+		addsearchword: addsearchword,
+		getsearchword: getsearchword
 	};
 });
 app.controller('searchCrl', function($scope,$window,$state,searchService){
@@ -31,15 +31,19 @@ app.controller('searchCrl', function($scope,$window,$state,searchService){
 	};
     
 	$scope.submit = function(event){
-		console.log("evet",event);
+		console.log("text", text.value);
+		$scope.keyword = text.value;
+        searchService.addsearchword($scope.keyword);
+        console.log("searchword", searchService.getsearchword());
+		console.log("evetKeycode",event.keyCode);
+
 		if(event.keyCode === 13) {
 			recognition.stop();
-			$state.go("recipes",{cusine:text.value});
+			console.log("In side of if");
+			$state.go("results",{searchword:text.value});
 		}
 	}
 	recognition.onresult = function (event) {
-		
-			console.log("text", text.value);
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             // if (!event.results.final) {
             // 	text.value += event.results[i][0].transcript;
@@ -52,7 +56,7 @@ app.controller('searchCrl', function($scope,$window,$state,searchService){
 
           }
         $scope.keyword = text.value;
-        searchService.addcusine($scope.keyword);
+        searchService.addsearchword($scope.keyword);
          // $scope.keyword = event.results[0][0].transcript;
         // $scope.confidence =  event.results[0][0].confidence;
     };
