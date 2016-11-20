@@ -1,0 +1,59 @@
+<html>
+<head>
+</head>
+<body>
+
+<h1 id= "bigONE"></h1>
+
+
+<div id ="yup">
+<a id = "btnLogin" href="#"> Login Anonymously </a>
+</div>
+
+
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.1/firebase.js"></script>
+
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyC_RWVS2jorTZQkVeBhOjN9su3DgvAiIbk",
+    authDomain: "metabunz-c4c1c.firebaseapp.com",
+    databaseURL: "https://metabunz-c4c1c.firebaseio.com",
+    storageBucket: "metabunz-c4c1c.appspot.com",
+    messagingSenderId: "250690832922"
+  };
+  firebase.initializeApp(config);
+
+  //get elements
+
+  var btnLogin = document.getElementById('btnLogin');
+  var btnLogout = document.getElementById('btnLogout');
+
+//click event listen
+btnLogin.addEventListener('click', e=> {
+  firebase.auth().signInAnonymously();
+});
+
+//auth listener
+
+firebase.auth().onAuthStateChanged(firebaseUser =>{
+  console.log(firebaseUser);
+});
+
+  
+</script>
+
+
+</body>
+</html>

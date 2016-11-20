@@ -854,6 +854,7 @@
 		min-height: 8em;
 	}
 
+
 	::-moz-focus-inner {
 		border: 0;
 	}
@@ -1253,6 +1254,7 @@
 			}
 
 		}
+
 
 /* Gallery */
 
@@ -1662,6 +1664,30 @@
 
 		}
 
+.yup { position: relative; }
+.yup input { text-indent: 30px;}
+.yup .fa-search { 
+  position: absolute;
+  top: 5px;
+  right: 9px;
+  font-size: 15px;
+}
+
+/*bar itself */ 
+	input[type=text] {
+    width: 160px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+    background-image: url('searchicon.png');
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    padding: 0.5px 0.5px 0.2px 0.5px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
 /* Header */
 
 	#header {
@@ -1678,7 +1704,7 @@
 
 		#header h1 {
 			position: absolute;
-			left: 1em;
+			left: 5em;
 			top: 0;
 			height: 3em;
 			line-height: 3em;
@@ -1686,7 +1712,7 @@
 		}
 
 			#header h1 a {
-				font-size: 1.25em;
+				font-size: 3em;
 			}
 
 		#header nav {
