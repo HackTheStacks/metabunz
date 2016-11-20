@@ -1,4 +1,5 @@
 #BACKEND 4 LYFE
+##Using the API
 `GET /search` proxies query to elasticsearch
 sample params:
 ```
@@ -28,4 +29,13 @@ sample response:
 {
     'results': ['franklin roosevelt', 'a cool exhibition name']
 }
+```
+
+##Setting up the dev environment
+```
+$ cd api
+$ virtualenv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ python ./metasearch.py
 ```
