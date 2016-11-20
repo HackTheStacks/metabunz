@@ -1,4 +1,3 @@
-#!/usr/bin/env python
 import logging
 
 import tornado.httpserver
@@ -7,6 +6,8 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 import tornado.gen
+
+import handlers.search
 
 
 class HealthHandler(tornado.web.RequestHandler):
@@ -22,7 +23,9 @@ class Application(tornado.web.Application):
 
         app_handlers = [
             (r'^/health/?$', HealthHandler),
+            (r'^/search/?$', handlers.search.SearchHandler),
         ]
+
         super(Application, self).__init__(app_handlers, **app_settings)
 
 
