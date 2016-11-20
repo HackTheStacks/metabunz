@@ -32,10 +32,22 @@ sample response:
 ```
 
 ##Setting up the dev environment
+Setting up the virtual environment:
 ```
 $ cd api
 $ virtualenv venv
 $ source venv/bin/activate
+```
+
+Setting up elasticsearch:
+```
+$ /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+$ brew install elasticsearch
+$ brew services start elasticsearch
+```
+
+Running the API:
+```
 $ pip install -r requirements.txt
 $ python ./metasearch.py
 ```
