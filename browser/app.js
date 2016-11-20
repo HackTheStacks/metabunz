@@ -1,5 +1,5 @@
 'use strict';
-window.app = angular.module('MetasearchAPP', ['ngRoute','ui.router']);
+window.app = angular.module('MetasearchAPP', ['ui.router']);
 
 app.config(function ($urlRouterProvider, $locationProvider) {
     // This turns off hashbang urls (/#about) and changes it to something normal (/about)
