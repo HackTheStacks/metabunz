@@ -8,6 +8,7 @@ import tornado.web
 import tornado.gen
 
 import handlers.search
+import handlers.keywords
 
 
 class HealthHandler(tornado.web.RequestHandler):
@@ -24,6 +25,7 @@ class Application(tornado.web.Application):
         app_handlers = [
             (r'^/health/?$', HealthHandler),
             (r'^/search/?$', handlers.search.SearchHandler),
+            (r'^/keywords/?$', handlers.keywords.KeywordsHandler),
         ]
 
         super(Application, self).__init__(app_handlers, **app_settings)
